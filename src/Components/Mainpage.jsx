@@ -12,7 +12,6 @@ const Mainpage = () => {
   const [answer, setAnswer] = useState("");
   const [question, setQuestion] = useState("");
   const [send, setSend] = useState(false);
-  const [APIrun, setAPIrun] = useState(1);
   let [loading, setLoading] = useState(true);
   let [color, setColor] = useState("#c4c4c4");
   // const prompt = "what is AI";
@@ -42,13 +41,22 @@ const Mainpage = () => {
       setAnswer(Answer);
     };
     ApiResponse();
-  }, [APIrun, question]);
+  }, [question]);
 
   useEffect(() => {
     setAnswer("");
     setQuestion(questionFromNavbar);
     questionFromNavbar !== "" && setSend(true);
   }, [questionFromNavbar]);
+
+  const handleEnter = (e) => {
+    if (e.key === "Enter" && input !== null) {
+      setAnswer("");
+      setSend(true);
+      setQuestion(input);
+      setQuestionsArray([...questionsArray, input].reverse());
+    }
+  };
 
   return (
     <div className="">
@@ -97,7 +105,9 @@ const Mainpage = () => {
       {send === true ? (
         <div className=" overflow-y-scroll ml-4 mt-4 pr-4 w-[22rem] h-[36rem] md:w-[45rem] md:h-[16.1rem] lg:w-[72rem] lg:h-[23rem] lg:text-xl lg:no-scrollbar lg:ml-8">
           <div className="flex flex-col gap-5">
-            <p className=" text-2xl font-bold tracking-wide lg:text-4xl lg:tracking-wider">{question}</p>
+            <p className=" text-2xl font-bold tracking-wide lg:text-4xl lg:tracking-wider">
+              {question}
+            </p>
             {answer !== "" ? (
               <p className=" pb-5 lg:tracking-wide">
                 <ReactMarkdown>{answer}</ReactMarkdown>
@@ -145,6 +155,7 @@ const Mainpage = () => {
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          onKeyDown={handleEnter}
           className=" propmt-input bg-promptbg py-4 pl-5 pr-20 -ml-2 rounded-full border-none outline-none w-[22.55rem] md:w-[46em] lg:w-[73rem] lg:text-xl lg:pl-8"
           type="text"
           placeholder="Enter a prompt here"
@@ -162,7 +173,6 @@ const Mainpage = () => {
               setAnswer("");
               setQuestion(input);
               setQuestionsArray([...questionsArray, input].reverse());
-              setAPIrun(APIrun + 1);
             }}
             className="w-4 absolute rotate-45 left-[19rem] bottom-[3.9rem] md:left-[42rem] md:bottom-[2.9rem] lg:left-[69rem] lg:bottom-[3.55rem]"
           >
