@@ -14,7 +14,7 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
           stroke-width="1.5"
           stroke="white"
           class="w-6 h-6"
-          className=" w-7 z-20"
+          className=" w-7 z-20 lg:w-9"
           onClick={() => setSidebar(!sidebar)}
         >
           <path
@@ -23,7 +23,7 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
           />
         </svg>
-        <p className=" text-xl z-20">
+        <p className=" text-xl z-20 lg:text-3xl">
           <a href="https://blog.google/technology/ai/google-gemini-ai">
             Gemini
           </a>
@@ -40,14 +40,14 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
 
       {/* Sidebar */}
       <div
-        className={`bg-sidebarbg w-80 absolute bottom-0 z-10 top-0 transition-all duration-300 md:w-[40rem]  ${
-          sidebar ? "left-0" : "-left-[40rem]"
+        className={`bg-sidebarbg w-80 absolute bottom-0 z-10 top-0 transition-all duration-300 md:w-[40rem] lg:w-[66rem] ${
+          sidebar ? "left-0" : "-left-[66rem]"
         }`}
       >
         <div className=" flex flex-col items-start ml-6 mt-20 md:mt-18">
-          <p className=" text-white font-semibold">Recent</p>
+          <p className=" text-white font-semibold lg:text-xl">Recent</p>
           <div
-            className=" overflow-y-scroll mt-5 pr-4 w-[17.5rem] h-[25rem] md:h-[7.6rem] md:w-[37rem]"
+            className=" overflow-y-scroll mt-5 pr-4 w-[17.5rem] h-[25rem] md:h-[7.6rem] md:w-[37rem] lg:w-[63rem] lg:no-scrollbar lg:h-[14rem]"
           >
             <div>
               <ul>

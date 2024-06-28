@@ -59,7 +59,7 @@ const Mainpage = () => {
       {question !== "" && (
         <>
           <span
-            className=" absolute rounded-full p-2 bg-plusbg left-[17.5rem] top-[1.10rem] md:left-[41rem]"
+            className=" absolute rounded-full p-2 bg-plusbg left-[17.5rem] top-[1.10rem] md:left-[41rem] lg:left-[68.5rem] lg:top-[1.20rem]"
             onClick={() => {
               setSend(false);
               setQuestion("");
@@ -95,18 +95,16 @@ const Mainpage = () => {
         </>
       )}
       {send === true ? (
-        <div
-          className=" overflow-y-scroll ml-4 mt-4 pr-4 w-[22rem] h-[36rem] md:w-[45rem] md:h-[16.1rem]"
-        >
+        <div className=" overflow-y-scroll ml-4 mt-4 pr-4 w-[22rem] h-[36rem] md:w-[45rem] md:h-[16.1rem] lg:w-[72rem] lg:h-[23rem] lg:text-xl lg:no-scrollbar lg:ml-8">
           <div className="flex flex-col gap-5">
-            <p className=" text-2xl font-bold tracking-wide">{question}</p>
+            <p className=" text-2xl font-bold tracking-wide lg:text-4xl lg:tracking-wider">{question}</p>
             {answer !== "" ? (
-              <p className=" pb-5">
+              <p className=" pb-5 lg:tracking-wide">
                 <ReactMarkdown>{answer}</ReactMarkdown>
               </p>
             ) : (
               <DotLoader
-                className=" left-24 top-28 md:left-64 md:top-8"
+                className=" left-24 top-28 md:left-64 md:top-8 lg:top-16 lg:left-[29rem]"
                 color={color}
                 loading={loading}
                 size={60}
@@ -121,16 +119,14 @@ const Mainpage = () => {
         <>
           <div className="pt-10 pl-5 flex flex-col gap-1 font-semibold leading-none md:pt-3">
             <p
-              className=" bg-gradient-to-r from-hellocolor1 to-hellocolor2 bg-clip-text"
+              className=" bg-gradient-to-r from-hellocolor1 to-hellocolor2 bg-clip-text text-transparent w-[19.5rem] text-[3.1rem] lg:text-[5rem] lg:w-[32rem]"
               style={{
-                width: "19.5rem",
                 color: "transparent",
-                fontSize: "3.1rem",
               }}
             >
               Hello,Friends
             </p>
-            <p className=" text-dimcolor" style={{ fontSize: "2.6rem" }}>
+            <p className=" text-dimcolor text-[2.6rem] lg:text-[4rem]">
               How can I help you today?
             </p>
           </div>
@@ -141,7 +137,7 @@ const Mainpage = () => {
         </>
       )}
       <div
-        className=" PROMPT fixed bottom-5 left-6"
+        className=" PROMPT fixed bottom-5 left-6 lg:bottom-2"
         style={{
           boxShadow: " 1px 1px 15px 15px rgb(19,19,20)",
         }}
@@ -149,11 +145,11 @@ const Mainpage = () => {
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          className=" propmt-input bg-promptbg py-4 pl-5 pr-20 -ml-2 rounded-full border-none outline-none w-[22.55rem] md:w-[46em] "
+          className=" propmt-input bg-promptbg py-4 pl-5 pr-20 -ml-2 rounded-full border-none outline-none w-[22.55rem] md:w-[46em] lg:w-[73rem] lg:text-xl lg:pl-8"
           type="text"
           placeholder="Enter a prompt here"
         />
-        {input!== "" ? (
+        {input !== "" ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -168,14 +164,14 @@ const Mainpage = () => {
               setQuestionsArray([...questionsArray, input].reverse());
               setAPIrun(APIrun + 1);
             }}
-            className="w-4 absolute rotate-45 left-[19rem] bottom-[3.9rem] md:left-[42rem] md:bottom-[2.9rem]"
+            className="w-4 absolute rotate-45 left-[19rem] bottom-[3.9rem] md:left-[42rem] md:bottom-[2.9rem] lg:left-[69rem] lg:bottom-[3.55rem]"
           >
             <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
           </svg>
         ) : (
           ""
         )}
-        <p className=" text-promptText text-xs mt-3">
+        <p className=" text-promptText text-xs mt-3 lg:text-base lg:tracking-wide lg:ml-24">
           Gemini may display inaccurate info, including about people, so
           double-check its responses.{" "}
           <a href="https://support.google.com/gemini/answer/13594961?hl=en">
