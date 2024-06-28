@@ -4,7 +4,6 @@ import ReactMarkdown from "react-markdown";
 import DotLoader from "react-spinners/PacmanLoader";
 import SuggestionContent from "./SuggestionContent";
 import Navbar from "./Navbar";
-import "../style.css";
 
 const Mainpage = () => {
   const [input, setInput] = useState("");
@@ -60,8 +59,7 @@ const Mainpage = () => {
       {question !== "" && (
         <>
           <span
-            className=" absolute   rounded-full p-2 bg-plusbg"
-            style={{ left: "17.5rem", top: "1.10rem" }}
+            className=" absolute rounded-full p-2 bg-plusbg left-[17.5rem] top-[1.10rem] md:left-[41rem]"
             onClick={() => {
               setSend(false);
               setQuestion("");
@@ -98,8 +96,7 @@ const Mainpage = () => {
       )}
       {send === true ? (
         <div
-          className=" overflow-y-scroll ml-4 mt-4 pr-4"
-          style={{ width: "22rem", height: "36rem" }}
+          className=" overflow-y-scroll ml-4 mt-4 pr-4 w-[22rem] h-[36rem] md:w-[45rem] md:h-[16.1rem]"
         >
           <div className="flex flex-col gap-5">
             <p className=" text-2xl font-bold tracking-wide">{question}</p>
@@ -109,7 +106,7 @@ const Mainpage = () => {
               </p>
             ) : (
               <DotLoader
-                className=" left-24 top-28"
+                className=" left-24 top-28 md:left-64 md:top-8"
                 color={color}
                 loading={loading}
                 size={60}
@@ -152,14 +149,11 @@ const Mainpage = () => {
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          className=" bg-promptbg py-4 pl-5 pr-20 -ml-2 rounded-full border-none outline-none "
+          className=" propmt-input bg-promptbg py-4 pl-5 pr-20 -ml-2 rounded-full border-none outline-none w-[22.55rem] md:w-[46em] "
           type="text"
           placeholder="Enter a prompt here"
-          style={{
-            width: "22.55rem",
-          }}
         />
-        {input !== "" ? (
+        {input!== "" ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -174,11 +168,7 @@ const Mainpage = () => {
               setQuestionsArray([...questionsArray, input].reverse());
               setAPIrun(APIrun + 1);
             }}
-            className="w-4 absolute rotate-45"
-            style={{
-              left: "19rem",
-              bottom: "3.9rem",
-            }}
+            className="w-4 absolute rotate-45 left-[19rem] bottom-[3.9rem] md:left-[42rem] md:bottom-[2.9rem]"
           >
             <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
           </svg>

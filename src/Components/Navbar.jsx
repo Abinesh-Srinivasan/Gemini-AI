@@ -40,18 +40,14 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
 
       {/* Sidebar */}
       <div
-        className={`bg-sidebarbg w-80 absolute bottom-0 z-10 top-0 transition-all duration-300  ${
-          sidebar ? "left-0" : "-left-80"
+        className={`bg-sidebarbg w-80 absolute bottom-0 z-10 top-0 transition-all duration-300 md:w-[40rem]  ${
+          sidebar ? "left-0" : "-left-[40rem]"
         }`}
       >
-        <div className=" flex flex-col items-start ml-6 mt-20">
+        <div className=" flex flex-col items-start ml-6 mt-20 md:mt-18">
           <p className=" text-white font-semibold">Recent</p>
           <div
-            className=" overflow-y-scroll mt-5 pr-4"
-            style={{
-              width: "17.5rem",
-              height: "25rem",
-            }}
+            className=" overflow-y-scroll mt-5 pr-4 w-[17.5rem] h-[25rem] md:h-[7.6rem] md:w-[37rem]"
           >
             <div>
               <ul>
@@ -62,7 +58,7 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
                       sendQuestionToMainpage(sidebarQuestion);
                       setSidebar(!sidebar);
                     }}
-                    className="mb-7 text-lg tracking-wide flex items-center"
+                    className="mb-7 text-lg tracking-wide flex items-center md:mb-3"
                   >
                     <span>
                       <svg
@@ -88,7 +84,7 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
               </ul>
             </div>
           </div>
-          <div className=" mt-10 flex flex-col gap-5 text-white text-xl font-semibold tracking-wide">
+          <div className=" mt-10 flex flex-col gap-5 text-white text-xl font-semibold tracking-wide md:text-lg md:gap-3 md:mt-8">
             <div className=" HELP">
               <a
                 href="https://support.google.com/gemini/?hl=en#topic=13194540"
@@ -215,7 +211,7 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
               </a>
             </div>
           </div>
-          <div className=" LOCATION text-sm text-white mt-8 flex gap-2 items-center ml-1">
+          <div className=" LOCATION text-sm text-white mt-8 flex gap-2 items-center ml-1 md:mt-5">
             <div className=" w-3 h-3 bg-white rounded-full"></div>
             <a
               href="https://maps.app.goo.gl/CJTMPYPuahUk1UFLA"
