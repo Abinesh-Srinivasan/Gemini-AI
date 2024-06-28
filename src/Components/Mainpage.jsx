@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import DotLoader from "react-spinners/PacmanLoader";
 import SuggestionContent from "./SuggestionContent";
 import Navbar from "./Navbar";
+import "../style.css";
 
 const Mainpage = () => {
   const [input, setInput] = useState("");
@@ -121,7 +122,7 @@ const Mainpage = () => {
         </div>
       ) : (
         <>
-          <div className="pt-10 pl-5 flex flex-col gap-1 font-semibold leading-none ">
+          <div className="pt-10 pl-5 flex flex-col gap-1 font-semibold leading-none md:pt-3">
             <p
               className=" bg-gradient-to-r from-hellocolor1 to-hellocolor2 bg-clip-text"
               style={{
