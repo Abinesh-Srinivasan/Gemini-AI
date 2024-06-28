@@ -2,7 +2,6 @@ import { useState } from "react";
 import Abinesh from "../assets/Abinesh2.png";
 const Navbar = ({ sidebarQuestions, questionFromNav }) => {
   const [sidebar, setSidebar] = useState(false);
-  console.log(sidebarQuestions);
   const sendQuestionToMainpage = (qn) => questionFromNav(qn);
   return (
     <div className=" flex justify-between p-5 items-center ">

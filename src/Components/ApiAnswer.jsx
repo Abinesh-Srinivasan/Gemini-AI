@@ -1,6 +1,5 @@
 import axios from "axios";
-import GenerateAnswer from "./GenerateAnswer";
-const ApiAnswer = ({input}) => {
+const ApiAnswer = ({ input }) => {
   const ApiResponse = async () => {
     const response = await axios({
       url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyAL5CTqVZZfIg8IyM1OkCZkF7vSqSOXr9k",
@@ -9,10 +8,8 @@ const ApiAnswer = ({input}) => {
         contents: [{ parts: [{ text: input }] }],
       },
     });
-    // console.log(response);
     const Answer =
       response["data"]["candidates"][0]["content"]["parts"][0]["text"];
-    // <GenerateAnswer Answer={Answer} />;
     console.log(Answer);
   };
   ApiResponse();

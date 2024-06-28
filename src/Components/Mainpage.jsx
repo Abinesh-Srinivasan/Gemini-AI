@@ -14,16 +14,14 @@ const Mainpage = () => {
   const [send, setSend] = useState(false);
   let [loading, setLoading] = useState(true);
   let [color, setColor] = useState("#c4c4c4");
-  // const prompt = "what is AI";
   const suggestionItems = [
     "Suggest me the Best Books for read to maintain a good Physical and Mental health",
-    "Describe briefly about Indian cinema and How to make Profit in that as a Investor",
     "How to crack the Job at Top Product Based Companies like FAANG and Microsoft",
     "Explain the full process of how Stock Market works and how to invest in the Stock Market",
+    "Tell me your opinion about the movie Dilwale Dulhania Le Jayenge",
   ];
   const handleInput = (suggestion) => setInput(suggestion);
   const handleQuestionFromNavbar = (qnFrNav) => setQuestionFromNavbar(qnFrNav);
-  console.log(questionFromNavbar);
 
   useEffect(() => {
     const ApiResponse = async () => {
