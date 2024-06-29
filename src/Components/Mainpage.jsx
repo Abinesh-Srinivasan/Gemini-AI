@@ -18,7 +18,7 @@ const Mainpage = () => {
     "Suggest me the Best Books for read to maintain a good Physical and Mental health",
     "How to crack the Job at Top Product Based Companies like FAANG and Microsoft",
     "Explain the full process of how Stock Market works and how to invest in the Stock Market",
-    "Tell me your opinion about the movie Dilwale Dulhania Le Jayenge",
+    "What is Lok Sabha and Rajya Sabha. Explain how Indian Government is running",
   ];
   const handleInput = (suggestion) => setInput(suggestion);
   const handleQuestionFromNavbar = (qnFrNav) => setQuestionFromNavbar(qnFrNav);
