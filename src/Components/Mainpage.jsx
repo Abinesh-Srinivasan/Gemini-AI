@@ -15,7 +15,7 @@ const Mainpage = () => {
   let [loading, setLoading] = useState(true);
   let [color, setColor] = useState("#c4c4c4");
   const suggestionItems = [
-    "Suggest me the Best Books for read to maintain a good Physical and ",
+    "Suggest me the Best Books for read to maintain a good Physical and Mental health",
     "How to crack the Job at Top Product Based Companies like FAANG and Microsoft",
     "Explain the full process of how Stock Market works and how to invest in the Stock Market",
     "What is Lok Sabha and Rajya Sabha. Explain how Indian Government is running",
