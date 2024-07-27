@@ -82,11 +82,11 @@ const Mainpage = () => {
       {send === true ? (
         <div className=" overflow-y-scroll ml-[5vw] mt-[2vh] pr-[3vw] w-[90vw] h-[68.1vh] md:h-[80vh] md:text-[4vw] lg:w-[90vw] lg:h-[64vh] lg:text-[1.5vw] lg:no-scrollbar lg:ml-[3vw]">
           <div className="flex flex-col gap-[1vh] lg:gap-[3vh]">
-            <p className=" text-[6vw] font-bold tracking-wide lg:text-[2.5vw] lg:tracking-wider">
+            <p className=" text-[6vw] font-bold tracking-wide lg:text-[2.5vw] lg:tracking-wider xl:text-[3vw] 4k:text-[3.5vw]">
               {question}
             </p>
             {answer !== "" ? (
-              <p className=" pb-5 lg:tracking-wide">
+              <p className=" pb-5 lg:tracking-wide xl:text-[2vw] 4k:text-[2.5vw]">
                 <ReactMarkdown>{answer}</ReactMarkdown>
               </p>
             ) : (
@@ -104,7 +104,7 @@ const Mainpage = () => {
         </div>
       ) : (
         <>
-          <div className="pt-[5vh] pl-[5vw] flex flex-col gap-1 font-semibold leading-none lg:pt-[0vh] lg:pl-[2vw]">
+          <div className="pt-[5vh] pl-[5vw] flex flex-col gap-1 font-semibold leading-none lg:pt-[0vh] lg:pl-[2vw] xl:pt-[6vh] 4k:pt-[2vh]">
             <p
               className=" bg-gradient-to-r from-hellocolor1 to-hellocolor2 bg-clip-text text-transparent text-[13vw] lg:text-[6vw] lg:w-[40vw]"
               style={{
@@ -124,7 +124,7 @@ const Mainpage = () => {
         </>
       )}
       <div
-        className=" PROMPT fixed bottom-[3vh] left-[6vw] md:left-[3vw] md:bottom-[1.5vh] lg:bottom-2"
+        className=" PROMPT fixed bottom-[3vh] left-[6vw] md:left-[3vw] md:bottom-[1.5vh] lg:bottom-2 xl:bottom-[2vh] 4k:bottom-[3vh]"
         style={{
           boxShadow: " 1px 1px 15px 15px rgb(19,19,20)",
         }}
@@ -133,7 +133,7 @@ const Mainpage = () => {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleEnter}
-          className=" propmt-input bg-promptbg py-4 pl-5 pr-[14vw] -ml-2 rounded-full border-none outline-none w-[22.55rem] md:w-[95vw] md:py-[2.5vh] md:pl-[5vw] md:text-[4vw] lg:w-[73rem] lg:text-xl lg:pl-8 lg:pr-[8vw]"
+          className=" propmt-input bg-promptbg py-4 pl-5 pr-[14vw] -ml-2 rounded-full border-none outline-none w-[22.55rem] md:w-[95vw] md:py-[2.5vh] md:pl-[5vw] md:text-[4vw] lg:w-[73rem] lg:text-xl lg:pl-8 lg:pr-[8vw] xl:w-[95vw] xl:py-[3.5vh] xl:text-[2vw] 4k:pl-[3vw] "
           type="text"
           placeholder="Enter a prompt here"
         />
@@ -146,12 +146,12 @@ const Mainpage = () => {
               setQuestion(input);
               setQuestionsArray([...questionsArray, input].reverse());
             }}
-            className=" w-[5vw] absolute left-[78vw] bottom-[7.2vh] md:left-[84vw] md:bottom-[10vh] lg:w-[2vw] lg:left-[88vw] lg:bottom-[8.5vh]"
+            className=" w-[5vw] absolute left-[78vw] bottom-[7.2vh] md:left-[84vw] md:bottom-[10vh] lg:w-[2vw] lg:left-[88vw] lg:bottom-[8.5vh] xl:w-[2.8vw] xl:left-[88.5vw] xl:bottom-[6.3vh] 4k:bottom-[7.3vh]"
           />
         ) : (
           ""
         )}
-        <p className=" text-promptText text-[3vw] mt-[1vh] md:text-[2.8vw] lg:text-base lg:tracking-wide lg:ml-24">
+        <p className=" text-promptText text-[3vw] mt-[1vh] md:text-[2.8vw] lg:text-base lg:tracking-wide lg:ml-24 xl:text-[1.5vw] xl:ml-[2.5vw] 4k:mt-[3vh] 4k:text-[1.55vw] 4k:ml-[1.5vw]">
           Gemini may display inaccurate info, including about people, so
           double-check its responses.{" "}
           <a href="https://support.google.com/gemini/answer/13594961?hl=en">

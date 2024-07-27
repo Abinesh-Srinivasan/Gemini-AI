@@ -38,14 +38,14 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
 
       {/* Sidebar */}
       <div
-        className={`bg-sidebarbg absolute bottom-[0vw] z-10 top-[0vw] transition-all duration-300 lg:w-[90vw] ${
-          sidebar ? "left-[0vw]" : "-left-[90vw]"
+        className={`bg-sidebarbg absolute bottom-[0vw] z-10 top-[0vw] transition-all duration-300 lg:w-[90vw] xl:w-[92vw] ${
+          sidebar ? "left-[0vw]" : "-left-[92vw]"
         }`}
       >
-        <div className=" flex flex-col items-start ml-[6vw] mt-[10vh] md:mt-[15vh] lg:ml-[2vw] lg:mt-[18vh]">
-          <p className=" text-white font-semibold md:text-[4vw] lg:text-[2vw]">Recent</p>
+        <div className=" flex flex-col items-start ml-[6vw] mt-[10vh] md:mt-[15vh] lg:ml-[2vw] lg:mt-[18vh] xl:mt-[14vh]">
+          <p className=" text-white font-semibold md:text-[4vw] lg:text-[2vw] xl:text-[2.8vw] ">Recent</p>
           <div
-            className=" overflow-y-scroll mt-5 pr-4 w-[75vw] h-[47vh] md:h-[42vh] md:w-[80vw] lg:w-[85vw] lg:no-scrollbar lg:h-[32vh]"
+            className=" overflow-y-scroll mt-5 pr-4 w-[75vw] h-[47vh] md:h-[42vh] md:w-[80vw] lg:w-[85vw] lg:no-scrollbar lg:h-[32vh] xl:h-[38vh] xl:w-[87vw]"
           >
             <div>
               <ul>
@@ -56,7 +56,7 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
                       sendQuestionToMainpage(sidebarQuestion);
                       setSidebar(!sidebar);
                     }}
-                    className="mb-[2vh] text-[4.5vw] tracking-wide flex items-center md:mb-[2.5vh] lg:text-[1.75vw]"
+                    className="mb-[2vh] text-[4.5vw] tracking-wide flex items-center md:mb-[2.5vh] lg:text-[1.75vw] xl:text-[2.1vw]"
                   >
                     <span>
                       <svg
@@ -82,7 +82,7 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
               </ul>
             </div>
           </div>
-          <div className=" mt-[5vh] flex flex-col gap-5 text-white text-[5vw] font-semibold tracking-wide md:mt-[5vh] md:text-[5vw] md:gap-3 lg:text-[1.5vw]">
+          <div className=" mt-[5vh] flex flex-col gap-5 text-white text-[5vw] font-semibold tracking-wide md:mt-[5vh] md:text-[5vw] md:gap-3 lg:text-[1.5vw] xl:text-[2.3vw]">
             <div className=" HELP">
               <a
                 href="https://support.google.com/gemini/?hl=en#topic=13194540"
@@ -209,7 +209,7 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
               </a>
             </div>
           </div>
-          <div className=" LOCATION text-[3.5vw] text-white mt-[3vh] flex gap-2 items-center ml-1 md:mt-[2vh] lg:text-[1.4vw]">
+          <div className=" LOCATION text-[3.5vw] text-white mt-[3vh] flex gap-2 items-center ml-1 md:mt-[2vh] lg:text-[1.4vw] xl:text-[1.8vw]">
             <div className=" w-3 h-3 bg-white rounded-full"></div>
             <a
               href="https://maps.app.goo.gl/CJTMPYPuahUk1UFLA"
@@ -218,7 +218,7 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
               <p>Cuddalore, Tamil Nadu, India.</p>
             </a>
           </div>
-          <p className=" text-[3.5vw] text-copyrightblue ml-[6vw] mt-[1vw] font-bold tracking-wide md:ml-[3vw] lg:text-[1.5vw] lg:ml-[2vw] lg:mt-[0.5vh]">
+          <p className=" text-[3.5vw] text-copyrightblue ml-[6vw] mt-[1vw] font-bold tracking-wide md:ml-[3vw] lg:text-[1.5vw] lg:ml-[2vw] lg:mt-[0.5vh] xl:text-[1.85vw] xl:ml-[1.3vw]">
             Copyright &#169; {new Date().getFullYear()} | Gemini - AS
           </p>
         </div>
