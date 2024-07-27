@@ -4,6 +4,9 @@ import ReactMarkdown from "react-markdown";
 import DotLoader from "react-spinners/PacmanLoader";
 import SuggestionContent from "./SuggestionContent";
 import Navbar from "./Navbar";
+import Send from "../assets/Send.png";
+import Plus from "../assets/Plus.png";
+
 
 const Mainpage = () => {
   const [input, setInput] = useState("");
@@ -65,38 +68,14 @@ const Mainpage = () => {
       {question !== "" && (
         <>
           <span
-            className=" absolute rounded-full p-[0.65rem] bg-plusbg left-[17.5rem] top-[1.10rem] md:left-[41rem] lg:left-[68.5rem] lg:top-[1.20rem]"
+            className=" absolute left-[71vw] top-[2.1vh] md:left-[70vw] md:top-[4vh] lg:left-[86.5vw] lg:top-[4.3vh]"
             onClick={() => {
               setSend(false);
               setQuestion("");
               setInput("");
             }}
           >
-            <svg
-              width="19px"
-              height="19px"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              stroke="#e3e3e4,"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                {" "}
-                <path
-                  d="M4 12H20M12 4V20"
-                  stroke="#e3e3e4"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>{" "}
-              </g>
-            </svg>
+            <img src={Plus} className=" w-[10vw] md:w-[9vw] lg:w-[5vw]" />
           </span>
         </>
       )}
@@ -125,7 +104,7 @@ const Mainpage = () => {
         </div>
       ) : (
         <>
-          <div className="pt-[5vh] pl-[5vw] flex flex-col gap-1 font-semibold leading-none md:pt-[8vh] lg:pt-[2vh] lg:pl-[2vw]">
+          <div className="pt-[5vh] pl-[5vw] flex flex-col gap-1 font-semibold leading-none lg:pt-[0vh] lg:pl-[2vw]">
             <p
               className=" bg-gradient-to-r from-hellocolor1 to-hellocolor2 bg-clip-text text-transparent text-[13vw] lg:text-[6vw] lg:w-[40vw]"
               style={{
@@ -134,7 +113,7 @@ const Mainpage = () => {
             >
               Hello,Friends
             </p>
-            <p className=" text-dimcolor text-[9vw] leading-10 md:leading-none lg:text-[5vw]">
+            <p className=" text-dimcolor text-[12vw] lg:text-[5vw]">
               How can I help you today?
             </p>
           </div>
@@ -145,7 +124,7 @@ const Mainpage = () => {
         </>
       )}
       <div
-        className=" PROMPT fixed bottom-5 left-6 lg:bottom-2"
+        className=" PROMPT fixed bottom-[3vh] left-[6vw] md:left-[3vw] md:bottom-[1.5vh] lg:bottom-2"
         style={{
           boxShadow: " 1px 1px 15px 15px rgb(19,19,20)",
         }}
@@ -154,32 +133,25 @@ const Mainpage = () => {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleEnter}
-          className=" propmt-input bg-promptbg py-4 pl-5 pr-20 -ml-2 rounded-full border-none outline-none w-[22.55rem] md:w-[46em] lg:w-[73rem] lg:text-xl lg:pl-8"
+          className=" propmt-input bg-promptbg py-4 pl-5 pr-[14vw] -ml-2 rounded-full border-none outline-none w-[22.55rem] md:w-[95vw] md:py-[2.5vh] md:pl-[5vw] md:text-[4vw] lg:w-[73rem] lg:text-xl lg:pl-8 lg:pr-[8vw]"
           type="text"
           placeholder="Enter a prompt here"
         />
         {input !== "" ? (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-send"
-            viewBox="0 0 16 16"
+          <img
+            src={Send}
             onClick={() => {
               setSend(true);
               setAnswer("");
               setQuestion(input);
               setQuestionsArray([...questionsArray, input].reverse());
             }}
-            className="w-4 absolute rotate-45 left-[19rem] bottom-[3.9rem] md:left-[42rem] md:bottom-[2.9rem] lg:left-[69rem] lg:bottom-[3.55rem]"
-          >
-            <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z" />
-          </svg>
+            className=" w-[5vw] absolute left-[78vw] bottom-[7.2vh] md:left-[84vw] md:bottom-[10vh] lg:w-[2vw] lg:left-[88vw] lg:bottom-[8.5vh]"
+          />
         ) : (
           ""
         )}
-        <p className=" text-promptText text-xs mt-3 lg:text-base lg:tracking-wide lg:ml-24">
+        <p className=" text-promptText text-[3vw] mt-[1vh] md:text-[2.8vw] lg:text-base lg:tracking-wide lg:ml-24">
           Gemini may display inaccurate info, including about people, so
           double-check its responses.{" "}
           <a href="https://support.google.com/gemini/answer/13594961?hl=en">

@@ -45,7 +45,7 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
         <div className=" flex flex-col items-start ml-[6vw] mt-[10vh] md:mt-[15vh] lg:ml-[2vw] lg:mt-[18vh]">
           <p className=" text-white font-semibold md:text-[4vw] lg:text-[2vw]">Recent</p>
           <div
-            className=" overflow-y-scroll mt-5 pr-4 w-[75vw] h-[47vh] md:h-[35vh] md:w-[80vw] lg:w-[80vw] lg:no-scrollbar lg:h-[30vh]"
+            className=" overflow-y-scroll mt-5 pr-4 w-[75vw] h-[47vh] md:h-[42vh] md:w-[80vw] lg:w-[85vw] lg:no-scrollbar lg:h-[32vh]"
           >
             <div>
               <ul>
@@ -82,7 +82,7 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
               </ul>
             </div>
           </div>
-          <div className=" mt-[5vh] flex flex-col gap-5 text-white text-[5vw] font-semibold tracking-wide md:mt-[5vh] md:text-[5vw] md:gap-3 lg:text-[2vw]">
+          <div className=" mt-[5vh] flex flex-col gap-5 text-white text-[5vw] font-semibold tracking-wide md:mt-[5vh] md:text-[5vw] md:gap-3 lg:text-[1.5vw]">
             <div className=" HELP">
               <a
                 href="https://support.google.com/gemini/?hl=en#topic=13194540"
@@ -209,7 +209,7 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
               </a>
             </div>
           </div>
-          <div className=" LOCATION text-[3.5vw] text-white mt-[3vh] flex gap-2 items-center ml-1 md:mt-[2vh]">
+          <div className=" LOCATION text-[3.5vw] text-white mt-[3vh] flex gap-2 items-center ml-1 md:mt-[2vh] lg:text-[1.4vw]">
             <div className=" w-3 h-3 bg-white rounded-full"></div>
             <a
               href="https://maps.app.goo.gl/CJTMPYPuahUk1UFLA"
@@ -218,7 +218,7 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
               <p>Cuddalore, Tamil Nadu, India.</p>
             </a>
           </div>
-          <p className=" text-[3.5vw] text-copyrightblue ml-[6vw] mt-[1vw] font-bold tracking-wide md:ml-[3vw]">
+          <p className=" text-[3.5vw] text-copyrightblue ml-[6vw] mt-[1vw] font-bold tracking-wide md:ml-[3vw] lg:text-[1.5vw] lg:ml-[2vw] lg:mt-[0.5vh]">
             Copyright &#169; {new Date().getFullYear()} | Gemini - AS
           </p>
         </div>
