@@ -57,7 +57,7 @@ const Mainpage = () => {
   };
 
   return (
-    <div className="">
+    <div>
       <Navbar
         sidebarQuestions={questionsArray}
         questionFromNav={handleQuestionFromNavbar}
@@ -65,7 +65,7 @@ const Mainpage = () => {
       {question !== "" && (
         <>
           <span
-            className=" absolute rounded-full p-2 bg-plusbg left-[17.5rem] top-[1.10rem] md:left-[41rem] lg:left-[68.5rem] lg:top-[1.20rem]"
+            className=" absolute rounded-full p-[0.65rem] bg-plusbg left-[17.5rem] top-[1.10rem] md:left-[41rem] lg:left-[68.5rem] lg:top-[1.20rem]"
             onClick={() => {
               setSend(false);
               setQuestion("");
@@ -101,9 +101,9 @@ const Mainpage = () => {
         </>
       )}
       {send === true ? (
-        <div className=" overflow-y-scroll ml-4 mt-4 pr-4 w-[22rem] h-[36rem] md:w-[45rem] md:h-[16.1rem] lg:w-[72rem] lg:h-[23rem] lg:text-xl lg:no-scrollbar lg:ml-8">
-          <div className="flex flex-col gap-5">
-            <p className=" text-2xl font-bold tracking-wide lg:text-4xl lg:tracking-wider">
+        <div className=" overflow-y-scroll ml-[5vw] mt-[2vh] pr-[3vw] w-[90vw] h-[68.1vh] md:h-[80vh] md:text-[4vw] lg:w-[90vw] lg:h-[64vh] lg:text-[1.5vw] lg:no-scrollbar lg:ml-[3vw]">
+          <div className="flex flex-col gap-[1vh] lg:gap-[3vh]">
+            <p className=" text-[6vw] font-bold tracking-wide lg:text-[2.5vw] lg:tracking-wider">
               {question}
             </p>
             {answer !== "" ? (
@@ -125,16 +125,16 @@ const Mainpage = () => {
         </div>
       ) : (
         <>
-          <div className="pt-10 pl-5 flex flex-col gap-1 font-semibold leading-none md:pt-3">
+          <div className="pt-[5vh] pl-[5vw] flex flex-col gap-1 font-semibold leading-none md:pt-[8vh] lg:pt-[2vh] lg:pl-[2vw]">
             <p
-              className=" bg-gradient-to-r from-hellocolor1 to-hellocolor2 bg-clip-text text-transparent w-[19.5rem] text-[3.1rem] lg:text-[5rem] lg:w-[32rem]"
+              className=" bg-gradient-to-r from-hellocolor1 to-hellocolor2 bg-clip-text text-transparent text-[13vw] lg:text-[6vw] lg:w-[40vw]"
               style={{
                 color: "transparent",
               }}
             >
               Hello,Friends
             </p>
-            <p className=" text-dimcolor text-[2.6rem] lg:text-[4rem]">
+            <p className=" text-dimcolor text-[9vw] leading-10 md:leading-none lg:text-[5vw]">
               How can I help you today?
             </p>
           </div>

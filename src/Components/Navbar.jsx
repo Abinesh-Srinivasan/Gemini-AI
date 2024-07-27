@@ -4,7 +4,7 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
   const [sidebar, setSidebar] = useState(false);
   const sendQuestionToMainpage = (qn) => questionFromNav(qn);
   return (
-    <div className=" flex justify-between p-5 items-center ">
+    <div className=" flex justify-between p-[5vw] items-center lg:p-[0.75vw] ">
       <div className="flex gap-4 items-center">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -12,8 +12,7 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="white"
-          class="w-6 h-6"
-          className=" w-7 z-20 lg:w-9"
+          className=" w-[7vw] h-[7vw] z-20 lg:w-[3vw]"
           onClick={() => setSidebar(!sidebar)}
         >
           <path
@@ -22,7 +21,7 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
             d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
           />
         </svg>
-        <p className=" text-xl z-20 lg:text-3xl">
+        <p className=" text-[6vw] z-20 lg:text-[3vw]">
           <a href="https://blog.google/technology/ai/google-gemini-ai">
             Gemini
           </a>
@@ -33,20 +32,20 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
           href="https://www.instagram.com/a_b_i_n_e_s_h__s?igsh=djB0cGt1YzljaG5t"
           target="__blank"
         >
-          <img src={Abinesh} className=" w-8" />
+          <img src={Abinesh} className=" w-[9vw] md:w-[8vw] lg:w-[4.5vw]" />
         </a>
       </div>
 
       {/* Sidebar */}
       <div
-        className={`bg-sidebarbg w-80 absolute bottom-0 z-10 top-0 transition-all duration-300 md:w-[40rem] lg:w-[66rem] ${
-          sidebar ? "left-0" : "-left-[66rem]"
+        className={`bg-sidebarbg absolute bottom-[0vw] z-10 top-[0vw] transition-all duration-300 lg:w-[90vw] ${
+          sidebar ? "left-[0vw]" : "-left-[90vw]"
         }`}
       >
-        <div className=" flex flex-col items-start ml-6 mt-20 md:mt-18">
-          <p className=" text-white font-semibold lg:text-xl">Recent</p>
+        <div className=" flex flex-col items-start ml-[6vw] mt-[10vh] md:mt-[15vh] lg:ml-[2vw] lg:mt-[18vh]">
+          <p className=" text-white font-semibold md:text-[4vw] lg:text-[2vw]">Recent</p>
           <div
-            className=" overflow-y-scroll mt-5 pr-4 w-[17.5rem] h-[25rem] md:h-[7.6rem] md:w-[37rem] lg:w-[63rem] lg:no-scrollbar lg:h-[14rem]"
+            className=" overflow-y-scroll mt-5 pr-4 w-[75vw] h-[47vh] md:h-[35vh] md:w-[80vw] lg:w-[80vw] lg:no-scrollbar lg:h-[30vh]"
           >
             <div>
               <ul>
@@ -57,7 +56,7 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
                       sendQuestionToMainpage(sidebarQuestion);
                       setSidebar(!sidebar);
                     }}
-                    className="mb-7 text-lg tracking-wide flex items-center md:mb-3"
+                    className="mb-[2vh] text-[4.5vw] tracking-wide flex items-center md:mb-[2.5vh] lg:text-[1.75vw]"
                   >
                     <span>
                       <svg
@@ -83,7 +82,7 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
               </ul>
             </div>
           </div>
-          <div className=" mt-10 flex flex-col gap-5 text-white text-xl font-semibold tracking-wide md:text-lg md:gap-3 md:mt-8">
+          <div className=" mt-[5vh] flex flex-col gap-5 text-white text-[5vw] font-semibold tracking-wide md:mt-[5vh] md:text-[5vw] md:gap-3 lg:text-[2vw]">
             <div className=" HELP">
               <a
                 href="https://support.google.com/gemini/?hl=en#topic=13194540"
@@ -210,7 +209,7 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
               </a>
             </div>
           </div>
-          <div className=" LOCATION text-sm text-white mt-8 flex gap-2 items-center ml-1 md:mt-5">
+          <div className=" LOCATION text-[3.5vw] text-white mt-[3vh] flex gap-2 items-center ml-1 md:mt-[2vh]">
             <div className=" w-3 h-3 bg-white rounded-full"></div>
             <a
               href="https://maps.app.goo.gl/CJTMPYPuahUk1UFLA"
@@ -219,7 +218,7 @@ const Navbar = ({ sidebarQuestions, questionFromNav }) => {
               <p>Cuddalore, Tamil Nadu, India.</p>
             </a>
           </div>
-          <p className=" text-sm text-copyrightblue ml-6 mt-1 font-bold tracking-wide">
+          <p className=" text-[3.5vw] text-copyrightblue ml-[6vw] mt-[1vw] font-bold tracking-wide md:ml-[3vw]">
             Copyright &#169; {new Date().getFullYear()} | Gemini - AS
           </p>
         </div>
