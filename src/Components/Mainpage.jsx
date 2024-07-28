@@ -80,18 +80,18 @@ const Mainpage = () => {
         </>
       )}
       {send === true ? (
-        <div className=" overflow-y-scroll ml-[5vw] mt-[2vh] pr-[3vw] w-[90vw] h-[68.1vh] md:h-[80vh] md:text-[4vw] lg:w-[90vw] lg:h-[64vh] lg:text-[1.5vw] lg:no-scrollbar lg:ml-[3vw]">
+        <div className=" overflow-y-scroll ml-[5vw] mt-[2vh] pr-[3vw] w-[90vw] h-[68.1vh] md:h-[64vh] md:text-[4vw] lg:w-[90vw] lg:h-[64vh] lg:text-[1.5vw] lg:no-scrollbar lg:ml-[3vw] 4k:mt-[0vh]">
           <div className="flex flex-col gap-[1vh] lg:gap-[3vh]">
             <p className=" text-[6vw] font-bold tracking-wide lg:text-[2.5vw] lg:tracking-wider xl:text-[3vw] 4k:text-[3.5vw]">
               {question}
             </p>
             {answer !== "" ? (
-              <p className=" pb-5 lg:tracking-wide xl:text-[2vw] 4k:text-[2.5vw]">
+              <p className=" pb-5 lg:tracking-wide lg:pb-[8vh] xl:text-[2vw] 4k:text-[2.5vw]">
                 <ReactMarkdown>{answer}</ReactMarkdown>
               </p>
             ) : (
               <DotLoader
-                className=" left-24 top-28 md:left-64 md:top-8 lg:top-16 lg:left-[29rem]"
+                className=" left-24 top-28 md:left-64 md:top-[10vh] lg:top-[10vh] lg:left-[40vw] 4k:left-[43vw] 4k:top-[15vh]"
                 color={color}
                 loading={loading}
                 size={60}
@@ -104,7 +104,7 @@ const Mainpage = () => {
         </div>
       ) : (
         <>
-          <div className="pt-[5vh] pl-[5vw] flex flex-col gap-1 font-semibold leading-none lg:pt-[0vh] lg:pl-[2vw] xl:pt-[6vh] 4k:pt-[2vh]">
+          <div className="pt-[5vh] pl-[5vw] flex flex-col gap-1 font-semibold leading-none lg:pt-[0vh] lg:pl-[2vw] xl:pt-[2vh] 4k:pt-[2vh]">
             <p
               className=" bg-gradient-to-r from-hellocolor1 to-hellocolor2 bg-clip-text text-transparent text-[13vw] lg:text-[6vw] lg:w-[40vw]"
               style={{
@@ -146,7 +146,7 @@ const Mainpage = () => {
               setQuestion(input);
               setQuestionsArray([...questionsArray, input].reverse());
             }}
-            className=" w-[5vw] absolute left-[78vw] bottom-[7.2vh] md:left-[84vw] md:bottom-[10vh] lg:w-[2vw] lg:left-[88vw] lg:bottom-[8.5vh] xl:w-[2.8vw] xl:left-[88.5vw] xl:bottom-[6.3vh] 4k:bottom-[7.3vh]"
+            className="  w-[5vw] absolute left-[78vw] bottom-[7.2vh] md:left-[84vw] md:bottom-[10vh] lg:w-[2vw] lg:left-[88vw] lg:bottom-[8.5vh] xl:w-[2.8vw] xl:left-[88.5vw] xl:bottom-[6.3vh] 4k:bottom-[7.3vh]"
           />
         ) : (
           ""
