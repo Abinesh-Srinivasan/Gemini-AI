@@ -7,7 +7,6 @@ import Navbar from "./Navbar";
 import Send from "../assets/Send.png";
 import Plus from "../assets/Plus.png";
 
-
 const Mainpage = () => {
   const [input, setInput] = useState("");
   const [questionsArray, setQuestionsArray] = useState([]);
@@ -25,11 +24,12 @@ const Mainpage = () => {
   ];
   const handleInput = (suggestion) => setInput(suggestion);
   const handleQuestionFromNavbar = (qnFrNav) => setQuestionFromNavbar(qnFrNav);
+  const apiUrl = import.meta.env.VITE_ApiUrl;
 
   useEffect(() => {
     const ApiResponse = async () => {
       const response = await axios({
-        url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyAL5CTqVZZfIg8IyM1OkCZkF7vSqSOXr9k",
+        url: apiUrl,
         method: "post",
         data: {
           contents: [{ parts: [{ text: question }] }],
@@ -129,28 +129,30 @@ const Mainpage = () => {
           boxShadow: " 1px 1px 15px 15px rgb(19,19,20)",
         }}
       >
-        <input
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={handleEnter}
-          className=" propmt-input bg-promptbg py-4 pl-5 pr-[14vw] -ml-2 rounded-full border-none outline-none w-[22.55rem] md:w-[95vw] md:py-[2.5vh] md:pl-[5vw] md:text-[4vw] lg:w-[73rem] lg:text-xl lg:pl-8 lg:pr-[8vw] xl:w-[95vw] xl:py-[3.5vh] xl:text-[2vw] 4k:pl-[3vw] "
-          type="text"
-          placeholder="Enter a prompt here"
-        />
-        {input !== "" ? (
-          <img
-            src={Send}
-            onClick={() => {
-              setSend(true);
-              setAnswer("");
-              setQuestion(input);
-              setQuestionsArray([...questionsArray, input].reverse());
-            }}
-            className="  w-[5vw] absolute left-[78vw] bottom-[7.2vh] md:left-[84vw] md:bottom-[10vh] lg:w-[2vw] lg:left-[88vw] lg:bottom-[8.5vh] xl:w-[2.8vw] xl:left-[88.5vw] xl:bottom-[6.3vh] 4k:bottom-[7.3vh]"
+        <div className=" relative">
+          <input
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={handleEnter}
+            className=" propmt-input bg-promptbg py-4 pl-5 pr-[14vw] -ml-2 rounded-full border-none outline-none w-[22.55rem] md:w-[95vw] md:py-[2.5vh] md:pl-[5vw] md:text-[4vw] lg:w-[73rem] lg:text-xl lg:pl-8 lg:pr-[8vw] xl:w-[95vw] xl:py-[3.5vh] xl:text-[2vw] 4k:pl-[3vw] "
+            type="text"
+            placeholder="Enter a prompt here"
           />
-        ) : (
-          ""
-        )}
+          {input !== "" ? (
+            <img
+              src={Send}
+              onClick={() => {
+                setSend(true);
+                setAnswer("");
+                setQuestion(input);
+                setQuestionsArray([...questionsArray, input].reverse());
+              }}
+              className="  w-[5vw] absolute left-[78vw] bottom-[2.1vh] md:left-[84vw] md:bottom-[3vh] lg:w-[2vw] lg:left-[88vw] lg:bottom-[3vh] xl:w-[2.8vw] xl:left-[88.5vw] xl:bottom-[3.3vh] 4k:bottom-[3.2vh]"
+            />
+          ) : (
+            ""
+          )}
+        </div>
         <p className=" text-promptText text-[3vw] mt-[1vh] md:text-[2.8vw] lg:text-base lg:tracking-wide lg:ml-24 xl:text-[1.5vw] xl:ml-[2.5vw] 4k:mt-[3vh] 4k:text-[1.55vw] 4k:ml-[1.5vw]">
           Gemini may display inaccurate info, including about people, so
           double-check its responses.{" "}
