@@ -10,14 +10,6 @@ A clone of Gemini AI built using **React.js** and **Tailwind CSS**, integrated w
 - Recent questions sidebar for easy access to previous queries.
 - Fast and responsive UI with `react-spinners` for loading states.
 
-## Project Architecture
-- **React.js:** Handles frontend logic and component-based UI.
-- **Tailwind CSS:** Provides customizable and responsive design.
-- **Google Generative AI:** Processes user prompts and generates AI responses via API.
-- **React Markdown:** Renders markdown content from AI-generated responses.
-- **Axios:** Manages API requests to send prompts and receive responses.
-- **React Spinners:** Displays loading indicators during API calls.
-
 ## Key Components
 1. **Main Input Interface:**
    - A simple input field for users to send prompts to the AI and receive responses in real-time.
@@ -27,3 +19,11 @@ A clone of Gemini AI built using **React.js** and **Tailwind CSS**, integrated w
 
 3. **API Integration:**
    - Uses `Axios` to send user prompts to the Google Generative AI API and fetch responses.
+
+## Project Architecture
+- **React.js:** Handles frontend logic and component-based UI.
+- **Tailwind CSS:** Provides customizable and responsive design.
+- **Google Generative AI:** Processes user prompts and generates AI responses via API.
+- **React Markdown:** Renders markdown content from AI-generated responses.
+- **Axios:** Manages API requests to send prompts and receive responses.
+- **React Spinners:** Displays loading indicators during API calls.
