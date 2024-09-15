@@ -2,7 +2,7 @@ import axios from "axios";
 const ApiAnswer = ({ input }) => {
   const ApiResponse = async () => {
     const response = await axios({
-      url: "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyAL5CTqVZZfIg8IyM1OkCZkF7vSqSOXr9k",
+      url: apiUrl,
       method: "post",
       data: {
         contents: [{ parts: [{ text: input }] }],
