@@ -3,7 +3,7 @@
 A clone of Gemini AI built using **React.js** and **Tailwind CSS**, integrated with Google Generative AI for prompt-based responses. The app includes a sidebar to store recent user questions.
 
 ## Live Demo
-[**https://gemini-as.netlify.app/**](#)
+**Website Link:** [Gemini-AS](https://gemini-as.netlify.app/)
 
 ## Features
 - AI-powered responses using Google Generative AI.
