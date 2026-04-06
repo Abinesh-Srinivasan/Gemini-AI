@@ -24,7 +24,7 @@ const Mainpage = () => {
   ];
   const handleInput = (suggestion) => setInput(suggestion);
   const handleQuestionFromNavbar = (qnFrNav) => setQuestionFromNavbar(qnFrNav);
-  const apiUrl = import.meta.env.VITE_ApiUrl2;
+  const apiUrl = import.meta.env.VITE_ApiUrl;
 
   useEffect(() => {
     const ApiResponse = async () => {
